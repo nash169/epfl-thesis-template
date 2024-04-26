@@ -119,3 +119,11 @@ The table~\ref{tab:example} is a floating table and was obtained with the follow
 \end{lstlisting}
 
 \lipsum[1-2]
+
+\begin{table}[t]
+    \centering
+    \resizebox{\textwidth}{!}{\subimport*{../tables}{table_results}}
+    \vspace{2mm}
+    \caption{Some other more elaborated table.}
+    \label{tab:hd_results}
+\end{table}

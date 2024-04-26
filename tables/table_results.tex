@@ -6,29 +6,21 @@
 \begin{document}
 \begin{tabular}{cccccccc}
     \toprule
-                    & \multicolumn{3}{c}{\textbf{MNIST}} &                           & \multicolumn{3}{c}{\textbf{CT slices}}                                                    \\
-    \cline{2-4} \cline{6-8}                                                                                                                                                      \\
-    \textbf{Method} & \textbf{SR - 10\%}                 & \textbf{MR - 1\%}         & \textbf{MR - 10\%}                     &   & \textbf{5\%} & \textbf{10\%} & \textbf{25\%} \\
+                    & \multicolumn{3}{c}{\textbf{MNIST}} &                           & \multicolumn{3}{c}{\textbf{CIFAR10}}                                            \\
+    \cline{2-4} \cline{6-8}                                                                                                                                            \\
+    \textbf{Method} & \textbf{1}                         & \textbf{2}                & \textbf{3}                           &   & \textbf{1} & \textbf{2} & \textbf{3} \\
     \midrule
-    EGP
-                    & $-0.54 \pm 0.01$                   & $-0.20 \pm 0.01$          & $-0.43 \pm 0.01$                       &
-                    & $-0.80 \pm 0.02$                   & $-0.96 \pm 0.00$          & $-1.20 \pm 0.09$                                                                          \\
+    A
+                    & $-0.54 \pm 0.01$                   & $-0.20 \pm 0.01$          & $-0.43 \pm 0.01$                     &
+                    & $-0.80 \pm 0.02$                   & $-0.96 \pm 0.00$          & $-1.20 \pm 0.09$                                                                \\
 
-    S-IMGP
-                    & $-1.42 \pm 0.01$                   & $2.24 \pm 0.20$           & $-0.68 \pm 0.08$                       &
-                    & $0.47 \pm 0.06$                    & $-0.59 \pm 0.08$          & $-0.08 \pm 0.01$                                                                          \\
+    B
+                    & $-1.42 \pm 0.01$                   & $2.24 \pm 0.20$           & $-0.68 \pm 0.08$                     &
+                    & $0.47 \pm 0.06$                    & $-0.59 \pm 0.08$          & $-0.08 \pm 0.01$                                                                \\
 
-    SS-IMGP
-                    & $\mathbf{-1.52 \pm 0.01}$          & $\mathbf{-0.59 \pm 0.01}$ & $\mathbf{-0.79 \pm 0.00}$              &
-                    & $ 26.1 \pm 12.7$                   & $ 1.03 \pm 0.09$          & $ -0.72 \pm 0.68$                                                                         \\
-
-    S-IMGP (full)
-                    & -                                  & -                         & -                                      &
-                    & $0.64 \pm 0.83$                    & $0.88 \pm 0.29$           & $-0.42 \pm 0.10$                                                                          \\
-
-    SS-IMGP (full)
-                    & -                                  & -                         & -                                      &
-                    & $\mathbf{-2.48 \pm 0.08}$          & $\mathbf{-2.35 \pm 0.04}$ & $\mathbf{-1.99 \pm 0.04}$                                                                 \\
+    C
+                    & $\mathbf{-1.52 \pm 0.01}$          & $\mathbf{-0.59 \pm 0.01}$ & $\mathbf{-0.79 \pm 0.00}$            &
+                    & $ 26.1 \pm 12.7$                   & $ 1.03 \pm 0.09$          & $ -0.72 \pm 0.68$                                                               \\
     \bottomrule
 \end{tabular}
 \end{document}
