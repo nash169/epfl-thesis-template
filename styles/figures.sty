@@ -1,0 +1,54 @@
+% Subfloat environment
+\@ifpackageloaded{subfig}{}{\RequirePackage{subfig}}
+
+% Drawing and plotting
+\@ifpackageloaded{pgfplots}{}{\RequirePackage{pgfplots}}
+\@ifpackageloaded{tikz-3dplot}{}{\RequirePackage{tikz-3dplot}}
+
+% Path to converted eps to pdf
+\@ifpackageloaded{epstopdf}{}{\RequirePackage[outdir=./figures/epstopdf/]{epstopdf}}
+
+% Useful tikz packages
+\usetikzlibrary{decorations.text,calc,arrows.meta, backgrounds, intersections}
+\tdplotsetmaincoords{70}{90}
+
+% Load an image within a tikz node
+\tikzset{image/.style={above right, inner sep=0pt, outer sep=0pt}}
+
+% Set for pgfplots
+\pgfplotsset{compat=1.15}
+\usepgfplotslibrary{groupplots}
+
+% Style to select only points from #1 to #2 (inclusive)
+\pgfplotsset{select coords between index/.style 2 args={
+                        x filter/.code={
+                                        \ifnum\coordindex<#1\def\pgfmathresult{}\fi
+                                        \ifnum\coordindex>#2\def\pgfmathresult{}\fi
+                                }
+                }}
+
+% % Externalize tikz pics (if we are not in standalone)
+% \@ifclassloaded{standalone}
+% {
+%     % if we are in standalone env do not externalize tikz pics
+% }
+% {
+%     \usetikzlibrary{external}
+%     \tikzexternalize[prefix=figures/tikzext/]
+% }
+
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlinegraphics[1]{%
+        \settototalheight\myheight{Xygp}%
+        \settodepth\mydepth{Xygp}%
+        \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+}
+
+\definecolor{darkyellow}{HTML}{f8bb00}
+\definecolor{darkblue}{HTML}{004d80}
+\definecolor{darkred}{HTML}{b51800}

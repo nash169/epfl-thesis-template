@@ -1,0 +1,35 @@
+% Compile separate files
+\@ifpackageloaded{standalone}{}{\RequirePackage[subpreambles=false,mode=buildnew]{standalone}}
+
+% Use import instead of standard method
+\@ifpackageloaded{import}{}{\RequirePackage{import}}
+
+% Text formatting
+\@ifpackageloaded{fontenc}{}{\RequirePackage[T1]{fontenc}}
+\@ifpackageloaded{inputenc}{}{\RequirePackage[utf8]{inputenc}}
+
+% Set language
+\@ifpackageloaded{babel}{}{\RequirePackage[english]{babel}}
+
+% Highlight text
+\@ifpackageloaded{soul}{}{\RequirePackage{soul}}
+
+% Appendix
+% \@ifpackageloaded{appendix}{}{\RequirePackage[toc,page]{appendix}}
+
+% ToDo notes
+\@ifpackageloaded{todonotes}{}{\RequirePackage[textsize=tiny,colorinlistoftodos]{todonotes}}
+
+% Ref
+\@ifpackageloaded{hyperref}{}{\RequirePackage{hyperref}}
+
+% Double underline
+\def\doubleunderline#1{\underline{\underline{#1}}}
+
+% Define relative path
+% https://tex.stackexchange.com/questions/8351/what-do-makeatletter-and-makeatother-do
+% \makeatletter
+\def\relativepath{\import@path}
+% \makeatother
+
+\usepackage{textcomp}
